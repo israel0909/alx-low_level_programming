@@ -11,7 +11,7 @@ int main(void)
 	char letters[26] = "abcdefghijklmnopqrstuvwxyz";
 	int input;
 
-	for (input = 0; input <= 26;)
+	for (input = 0; input < 26;)
 	{
 		putchar(letters[input]);
 		input++;
