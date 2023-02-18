@@ -25,7 +25,7 @@ int main(void)
 		while (second < 99)
 		{
 			snd1 = (second / 10 + '0');
-			f_d2 = (second % 10 + '0');
+			snd2 = (second % 10 + '0');
 			if (first < second)
 			{
 				putchar(fst1);
