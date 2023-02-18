@@ -11,9 +11,10 @@ int main(void)
 	char letters[26] = "abcdefghijklmnopqrstuvwxyz";
 	int input;
 
-	for (input = 0; input <= 26; input++)
+	for (input = 0; input <= 26;)
 	{
 		putchar(letters[input]);
+		input++;
 	}
 	/* I'm insert "/n" here and not above*/
 	/*; cause the task asks to use "putchar" twice*/
