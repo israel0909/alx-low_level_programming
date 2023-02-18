@@ -7,7 +7,7 @@
 
 int main(void)
 {
-	int first = 0;
+	int first;
 	int second = 0;
 
 	while (second < 10)
@@ -15,7 +15,7 @@ int main(void)
 		first = 0;
 		while (first < 10)
 		{
-			if (first != second &&  second < first)
+			if (second != first &&  second < first)
 			{
 				putchar('0' + (second % 10));
 				putchar('0' + (first % 10));
