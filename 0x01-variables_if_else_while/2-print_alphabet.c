@@ -15,7 +15,8 @@ int main(void)
 	{
 		putchar(letters[input]);
 	}
-	putchar("\n"); /* I'm insert "\n" here and not above*/
+	/* I'm insert "/n" here and not above*/
 	/*; cause the task asks to use "putchar" twice*/
+	putchar("\n");
 	return (0);
 }
