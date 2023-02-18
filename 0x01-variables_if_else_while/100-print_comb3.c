@@ -17,8 +17,8 @@ int main(void)
 		{
 			if (first != second &&  second < first)
 			{
-				putchar((second % 10) + '0');
-				putchar((first % 10) + '0');
+				putchar('0' + (second % 10));
+				putchar('0' + (first % 10));
 				putchar(',');
 				putchar(' ');
 			}
