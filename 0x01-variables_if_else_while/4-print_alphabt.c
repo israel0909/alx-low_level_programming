@@ -15,7 +15,7 @@ int main(void)
 		{
 			continue;
 		}
-		else if (letters == 'q)
+		else if (letters == 'q')
 		{
 			continue;
 		}
