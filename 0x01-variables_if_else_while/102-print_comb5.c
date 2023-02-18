@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 
 /**
  * main- going to be using greater than and less thans
@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	int first;
+	int first = 0;
 	int fst1;
 	int fst2;
 
@@ -16,16 +16,17 @@ int main(void)
 	int snd1;
 	int snd2;
 
-	while (first < 98)
+	while (first <= 98)
 	{
 		fst1 = (first / 10 + '0');
 		fst2 = (first % 10 + '0');
 
 		second = 0;
-		while (second < 99)
+		while (second <= 99)
 		{
 			snd1 = (second / 10 + '0');
 			snd2 = (second % 10 + '0');
+
 			if (first < second)
 			{
 				putchar(fst1);
@@ -34,7 +35,7 @@ int main(void)
 				putchar(snd1);
 				putchar(snd2);
 
-				if (first != 17)
+				if (first != 98)
 				{
 					putchar(',');
 					putchar(' ');
