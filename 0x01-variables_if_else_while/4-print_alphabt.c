@@ -11,7 +11,11 @@ int main(void)
 
 	for (letters = 'a'; letters <= 'z'; letters++)
 	{
-		if (letters == 'e' && letters == 'q')
+		if (letters == 'e')
+		{
+			continue;
+		}
+		else if (letters == 'q)
 		{
 			continue;
 		}
