@@ -10,10 +10,10 @@ int main(void)
 	int first = 0;
 	int second = 0;
 
-	while (second < 10)
+	while (first < 10)
 	{
-		first = 0;
-		while (first < 10)
+		second = 0;
+		while (second < 10)
 		{
 			if (first != second && first > second)
 			{
@@ -22,9 +22,9 @@ int main(void)
 				putchar(',');
 				putchar(' ');
 			}
-			first++;
+			second++;
 		}
-		second++;
+		first++;
 	}
 	putchar('\n');
 	return (0);
