@@ -17,6 +17,6 @@ int main(void)
 	}
 	/* I'm insert "/n" here and not above*/
 	/*; cause the task asks to use "putchar" twice*/
-	putchar("\n");
+	putchar('\n');
 	return (0);
 }
