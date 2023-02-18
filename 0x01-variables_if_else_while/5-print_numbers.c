@@ -11,7 +11,8 @@ int main(void)
 
 	for (numb = 0; numb <= 9; numb++)
 	{
-		printf("%d\n", numb);
+		printf("%d", numb);
 	}
+	printf("\n");
 	return (0);
 }
