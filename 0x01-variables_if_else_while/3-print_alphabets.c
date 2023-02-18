@@ -1,4 +1,4 @@
-#include <stdio>
+#include <stdio.h>
 
 /**
  *main- I'll declare a var (of type char; cause of single character values
