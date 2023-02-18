@@ -9,7 +9,7 @@ int main(void)
 {
 	int numb;
 
-	for (numb = 0; numb < 9; numb++)
+	for (numb = 0; numb <= 9; numb++)
 	{
 		putchar((numb % 10) + '0');
 		if (numb != 9)
