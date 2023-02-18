@@ -17,10 +17,14 @@ int main(void)
 		{
 			if (second != first &&  second < first)
 			{
-				putchar('0' + (second % 10));
-				putchar('0' + (first % 10));
-				putchar(',');
-				putchar(' ');
+				putchar('0' + second);
+				putchar('0' + first);
+
+				if (first + second != 17)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 			first++;
 		}
