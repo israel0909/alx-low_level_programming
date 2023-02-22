@@ -12,7 +12,7 @@ int main(void)
 	long b = 2;
 	int c = 0;
 
-	for ( ; c < 50; c++)
+	for ( ; c <= 49; c++)
 	{
 		if (c == 0)
 		{
