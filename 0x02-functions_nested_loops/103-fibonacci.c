@@ -2,42 +2,26 @@
 #include <stdio.h>
 
 /**
- * main- fibbo less than 4000000
+ * main- out first 50 fibbo num
  * Return: 0
 */
 
 int main(void)
 {
-	long a = 1;
-	long b = 2;
-	int c = 0;
 
-	for ( ; c <= 4000000; c++)
+	int a = 0;
+	long b = 1, 
+	k = 2, 
+	c = k;
+
+	while (k + b < 4000000)
 	{
-		if (c == 0)
-		{
-			printf("%ld, ", a);
-		}
-		else if (c == 1)
-		{
-			printf("%ld, ", b);
-		}
-		else if ((c < 3999999) && (c % 2 == 0))
-		{
-
-			b += a;
-			a = b - a;
-			printf("%ld, ", b);
-		}
-		if ((c == 4000000) && (c % 2 == 0))
-		{
-			b += a;
-			a = b - a;
-
-			printf("%ld", b);
-		}
+		k += b;
+		if (k % 2 == 0)
+		c += k;
+		b = k - b;
+		++a;
 	}
-	printf("\n");
+	printf("%ld\n", c);
 	return (0);
-
 }
