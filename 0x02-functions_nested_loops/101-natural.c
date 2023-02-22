@@ -16,7 +16,7 @@ int main(void)
 		{
 			x = x + y;
 		}
-		x++
+		x++;
 	}
 	printf("%d\n", x);
 	return (0);
