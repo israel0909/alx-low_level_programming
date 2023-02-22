@@ -13,12 +13,12 @@ int main(void)
 
 	while (x < 1024)
 	{
-		if ((y % 3 == 0) || (y % 5 == 0))
+		if ((x % 3 == 0) || (x % 5 == 0))
 		{
-			x = x + y;
+			y = x + y;
 		}
 		x++;
 	}
-	printf("%d\n", x);
+	printf("%d\n", y);
 	return (0);
 }
