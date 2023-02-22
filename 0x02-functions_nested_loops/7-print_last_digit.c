@@ -2,21 +2,27 @@
 
 /**
  * print_last_digit- prints last digit of an int
- * @c: input
+ * @n: input
  * Return: absolute value
 */
 
-int print_last_digit(int c)
+int print_last_digit(int n)
+
 {
 
 	int a;
 
-	a = c % 10;
+	if (n < 0)
+	{
+		n = -n;
+		a = n % 10;
+	}
+
 	if (a < 0)
 	{
-		a = a * -1;
+		a = -a;
+		_putchar(a + '0');
 	}
-	_putchar(a * '0');
-	return (c);
-}
+	return (a);
 
+}
