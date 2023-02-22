@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * main- Ignition
+ * print_alphabet- Entry
  * Return: 0
  * output- letters of the alphabet using char
 */
 
-int main(void)
+void print_alphabet(void)
 {
 	char x;
 
@@ -16,5 +16,4 @@ int main(void)
 	}
 
 	_putchar('\n');
-	return (0);
 }
