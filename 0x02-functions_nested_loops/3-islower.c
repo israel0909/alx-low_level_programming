@@ -7,9 +7,8 @@
  * output- gives 1 if out is true, 0 otherwise
 */
 
-int _islower(int c);
+int _islower(int c)
 {
-	int c;
 
 	if (c >= 97 && c <= 122)
 	{
