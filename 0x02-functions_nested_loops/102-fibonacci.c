@@ -24,7 +24,7 @@ int main(void)
 		}
 		else if (c < 49)
 		{
-		
+
 			b += a;
 			a = b - a;
 			printf("%ld, ", b);
