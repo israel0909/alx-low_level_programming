@@ -12,13 +12,13 @@ int main(void)
 	long b = 2;
 	int c = 0;
 
-	for ( ; c <= 49; c++)
+	for ( ; c <= 50; c++)
 	{
 		if (c == 0)
 		{
 			printf("%ld, ", a);
 		}
-		else if (c == 49)
+		else if (c == 50)
 		{
 			printf("%ld", b);
 		}
