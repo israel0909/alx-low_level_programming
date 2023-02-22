@@ -18,6 +18,10 @@ int main(void)
 		{
 			printf("%ld, ", a);
 		}
+		else if (c == 49)
+		{
+			printf("%ld", b);
+		}
 		else if (c == 1)
 		{
 			printf("%ld, ", b);
