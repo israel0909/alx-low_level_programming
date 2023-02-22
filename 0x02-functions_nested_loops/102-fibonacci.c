@@ -18,19 +18,23 @@ int main(void)
 		{
 			printf("%ld, ", a);
 		}
-		else if (c == 50)
-		{
-			printf("%ld", b);
-		}
 		else if (c == 1)
 		{
 			printf("%ld, ", b);
 		}
-		else
+		else if (c < 49)
 		{
+		
 			b += a;
 			a = b - a;
 			printf("%ld, ", b);
+		}
+		if (c == 50)
+		{
+			b += a;
+			a = b - a;
+
+			printf("%ld", b);
 		}
 	}
 	printf("\n");
