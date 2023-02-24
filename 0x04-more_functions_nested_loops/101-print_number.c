@@ -3,6 +3,7 @@
 
 /**
  * print_number- prints int inputs using char
+ * @n: input
  * Return: nil
 */
 
