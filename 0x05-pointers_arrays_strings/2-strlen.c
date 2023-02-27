@@ -1,9 +1,7 @@
-#include "main.h"
-#include <string.h>
 #include <stdio.h>
 
 /**
- * _strlen- returns the length of a sting 
+ * _strlen- returns the length of a sting
  * @s: var
  * Return: Always 0.
  */
