@@ -2,24 +2,26 @@
 
 
 /**
- * rev_string - Reversing a string
- * @s: The string var
- * Return: void
+ * rev_string - Reversingi a string
+ * @s: str input
+ * Return: string in reverse
  */
 
 void rev_string(char *s)
-{
-	int c = 0;
-	int i = 0;
-	int x;
 
-	for (c = 0; s[c] != '\0'; c++)
+{
+
+	int len = 0, 
+	i = 0;
+	char tmp;
+
+	while (s[i++])
+	len++;
+
+	for (i = len - 1; i >= len / 2; i--)
 	{
-		i++;
+	tmp = s[i];
+	s[i] = s[len - i - 1];
+	s[len - i - 1] = tmp;
 	}
-	for (x = i - 1; x >= 0; x--)
-	{
-		_putchar(s[x]);
-	}
-	_putchar('\n');
 }
