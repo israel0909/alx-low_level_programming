@@ -9,9 +9,9 @@
  * Return: dest
  */
 
- char *_strncat(char *dest, char *src, int n)
- {
- 	/*2 var, 1 4 d loop of dest, 2 4 d loop of src*/
+char *_strncat(char *dest, char *src, int n)
+{
+	/*2 var, 1 4 d loop of dest, 2 4 d loop of src*/
 	int a;
 	int b;
 	/*lop tru dest 2 store its len in d var, whil !='0'*/
@@ -25,4 +25,4 @@
 	}
 	/*return dest*/
 	return (dest);
- }
+}
