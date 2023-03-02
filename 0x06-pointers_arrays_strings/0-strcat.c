@@ -4,8 +4,8 @@
 
 /**
  * _strcat - concatinates two strings together.
- * @*dest: destination of concatination
- * @*src : source of concat...
+ * @dest: destination of concatination
+ * @src : source of concat...
  * Return: Always 0.
  */
 
