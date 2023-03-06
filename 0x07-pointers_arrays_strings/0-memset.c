@@ -10,7 +10,7 @@
 char *_memset(char *s, char b, unsigned int n)
 {
 	/*var 4 count*/
-	int x = 0;
+	unsigned int x = 0;
 	/*lup tru "s, while < "n*/
 	for ( ; x < n; x++)
 	{
