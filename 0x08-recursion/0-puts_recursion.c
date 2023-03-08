@@ -1,0 +1,27 @@
+#include "main.h"
+
+/**
+ * _puts_recursion - a function to print out input strings
+ * @s: input to print out
+ * Return: s
+ */
+
+void _puts_recursion(char *s)
+{
+	/*exit statement; next line when == '0*/
+	if (*s == '\0')
+	{
+		/*print \n*/
+		_putchar('\n');
+	}
+	/*!= exit statement*/
+	if (*s != '\0')
+	{
+		/*output "s*/
+		_putchar(*s);
+		/*increment string*/
+		s++;
+		/*recurse*/
+		_puts_recursion(s);
+	}
+}
