@@ -6,23 +6,17 @@
  * @y: power
  * Return: x pwr y OR 1 if 0 OR -1 if negative
  */
-
 int _pow_recursion(int x, int y)
 {
-	/*error statmnt; if < 0*/
+	int result = x;
+
 	if (y < 0)
-	{
 		return (-1);
-	}
-	/*rtrn state @ 1; if == 0*/
-	if (y == 0)
-	{
+
+	else if (y == 0)
 		return (1);
-	}
-	/*n! >= n*/
-	if (y >= 0)
-	{
-		/*recuse 2pwr, by decrement*/
-		return (x  * _pow_recursion(x, y - 1));
-	}
+
+	result *= _pow_recursion(x, y - 1);
+
+	return (result);
 }
