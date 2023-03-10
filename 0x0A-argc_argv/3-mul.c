@@ -11,6 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int x;
+
 	if (argc == 3)
 	{
 		x = atoi(argv[1]) * atoi(argv[2]);
