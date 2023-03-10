@@ -2,35 +2,28 @@
 #include <stdlib.h>
 
 /**
- * main - adds all positive int
- * @argc: counts arguments
- * @argv: outputs arguments
+ * main - main function
+ * @argc: argc
+ * @argv: argv
  * Return: 0
  */
-
 int main(int argc, char *argv[])
 {
 	int a;
-	int b;
+	int y;
 	int sum;
-
-	if (argc == 1)
-	{
-		printf("0\n");
-	}
 
 	for (a = 1; a < argc; a++)
 	{
-		for (b = 0; argv[a][b]; b++)
+		for (y = 0; argv[a][y]; y++)
 		{
-			if (argv[a][b] < '0' || argv[a][b] > '9')
+			if (argv[a][y] < '0' || argv[a][y] > '9')
 			{
 				printf("Error\n");
 				return (1);
 			}
-
 		}
-		sum += atoi(argv[a]);
+		sum = sum + atoi(argv[a]);
 	}
 	printf("%d\n", sum);
 	return (0);
