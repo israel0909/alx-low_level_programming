@@ -6,12 +6,11 @@
  * @av: argv
  * Return: pointer to a new string
  */
-
 char *argstostr(int ac, char **av)
 {
 	/*var 4 str and count*/
 	char *s;
-	int wrd, let, index, size = 0;
+	int wrd, let, index, size = ac;
 	
 	/*Returns NULL if ac == 0 or av == NULL*/
 	if (ac == 0 || av == NULL)
