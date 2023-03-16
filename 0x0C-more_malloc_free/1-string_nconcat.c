@@ -12,7 +12,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	/*var for pointer*/
 	char *x;
-	unsigned int cnt, l = n;
+	unsigned int cnt
+	unsigned int l = n;
 
 	/*if null in input, treat as empty*/
 	if (s1 == NULL)
@@ -37,7 +38,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (cnt = 0; s1[cnt]; cnt++)
 		x[l++] = s1[cnt];
 
-	for (cnt = 0; cnt < n && s2[cnt]; cnt++)
+	for (cnt = 0; s2[cnt] && cnt < n; cnt++)
 		x[l++] = s2[cnt];
 
 	x[l] = '\0';
