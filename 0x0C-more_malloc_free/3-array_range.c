@@ -10,11 +10,11 @@
 int *array_range(int min, int max)
 {
 	int *x;
-	int c, b;	
+	int c, b;
 
 	if (min > max)
 		return (NULL);
-	
+
 	b = max - min + 1;
 
 	x = malloc(sizeof(int) * b);
@@ -24,6 +24,6 @@ int *array_range(int min, int max)
 
 	for (c = 0; c < b; c++)
 		x[c] = min++;
-	
+
 	return (x);
 }
