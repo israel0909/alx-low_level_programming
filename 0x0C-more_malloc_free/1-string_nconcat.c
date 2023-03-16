@@ -12,14 +12,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	/*var for pointer*/
 	char *x;
-	unsigned int cnt, l = 0;
+	unsigned int cnt, l;
 
 	/*if null in input, treat as empty*/
 	if (s1 == NULL)
-	 return ("");
+		return ("");
 
 	if (s2 == NULL)
-	 return ("");
+		return ("");
 
 	/*get len of s1*/
 	for (cnt = 0; s1[cnt]; cnt++)
@@ -36,9 +36,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	/*s2 < n, add to s1*/
 	for (cnt = 0; s1[cnt]; cnt++)
 		x[l++] = s1[cnt];
-	
+
 	for (cnt = 0; cnt < n && s2[cnt]; cnt++)
-		x[l++] = s2[cnt]; 
+		x[l++] = s2[cnt];
 
 	x[l] = '\0';
 
