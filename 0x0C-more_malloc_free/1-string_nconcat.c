@@ -12,7 +12,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	/*var for pointer*/
 	char *x;
-	unsigned int cnt
+	unsigned int cnt;
 	unsigned int l = n;
 
 	/*if null in input, treat as empty*/
