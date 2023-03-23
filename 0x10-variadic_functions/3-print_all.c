@@ -1,98 +1,87 @@
 #include "variadic_functions.h"
-
-void print_chr(va_list arg);
-void print_int(va_list arg);
-void print_flt(va_list arg);
-void print_str(va_list arg);
+#include <stdlib.h>
 
 /**
- * print_all - prints anything
- * @format: string of characters by argument type
- */
+  * print_all - prints anything
+  * @format: printables by argument type
+  * Return: Nothing
+  */
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	int x = 0, y = 0;
-	char *separator = "";
-	printer_t funcs[] = {
-		{"c", print_chr},
-		{"i", print_int},
-		{"f", print_flt},
-		{"s", print_str}
+	f_dt form_types[] = {
+		{ "c", print_chr },
+		{ "i", print_int },
+		{ "f", print_flt },
+		{ "s", print_str }
 	};
+	unsigned int i = 0;
+	unsigned int j = 0;
+	char *separator = "";
 
 	va_start(args, format);
 
-	while (format && (*(format + x)))
+	while (format != NULL && format[i])
 	{
-		y = 0;
-
-		while (y < 4 && (*(format + x) != *(funcs[y].symbol)))
-			y++;
-
-		if (y < 4)
+		j = 0;
+		while (j < 4)
 		{
-			printf("%s", separator);
-			funcs[y].print(args);
-			separator = ", ";
+			if (format[i] == *form_types[j].identifier)
+			{
+				form_types[j].f(separator, args);
+				separator = ", ";
+			}
+			j++;
 		}
-		x++;
+		i++;
 	}
-	printf("\n");
-
 	va_end(args);
+	printf("\n");
 }
 
 /**
- * print_chr - prints a char
- * @arg: list of arguments as char
- */
-void print_chr(va_list arg)
+  * print_chr - prints char
+  * @separator: separator
+  * @args: variadic arguments
+  */
+void print_chr(char *separator, va_list args)
 {
-	char letter;
-
-	letter = va_arg(arg, int);
-	printf("%c", letter);
+	printf("%s%c", separator, va_arg(args, int));
 }
 
 /**
- * print_int - prints int
- * @arg: list of arguments as int
- */
-void print_int(va_list arg)
+  * print_int - prints integer
+  * @separator: separator
+  * @args: variadic arguments
+  */
+void print_int(char *separator, va_list args)
 {
-	int num;
-
-	num = va_arg(arg, int);
-	printf("%d", num);
+	printf("%s%i", separator, va_arg(args, int));
 }
 
 /**
- * print_flt - prints float
- * @arg: list of arguments as float
- */
-void print_flt(va_list arg)
+  * print_flt - prints float
+  * @separator: separator
+  * @args: variadic arguments
+  */
+void print_a_flt(char *separator, va_list args)
 {
-	float num;
-
-	num = va_arg(arg, double);
-	printf("%f", num);
+	printf("%s%f", separator, va_arg(args, double));
 }
 
 /**
- * print_str - prints a string
- * @arg: list of arguments as string
- */
-void print_str(va_list arg)
+  * print_str - prints string
+  * @separator: separator
+  * @args: variadic arguments
+  */
+void print_str(char *separator, va_list args)
 {
-	char *str;
+	char *arg = va_arg(args, char *);
 
-	str = va_arg(arg, char *);
-
-	if (str == NULL)
+	if (arg == NULL)
 	{
-		printf("(nil)");
+		printf("%s%s", separator, "(nil)");
 		return;
 	}
-	printf("%s", str);
+	printf("%s%s", separator, arg);
 }
