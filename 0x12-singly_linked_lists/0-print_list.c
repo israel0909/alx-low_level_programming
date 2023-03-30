@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * print_list - prints all elements of a linked list
@@ -8,8 +9,6 @@
  */
 size_t print_list(const list_t *h)
 {
-	size_t x = 0;
-
 	size_t cnt = 0;
 
 	while (h != NULL)
