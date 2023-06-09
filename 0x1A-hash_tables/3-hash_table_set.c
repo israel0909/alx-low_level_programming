@@ -23,7 +23,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	x = key_index((unsigned char *)key, ht->size);
 
-	/* checks if a collision exists */
 	temp = ht->array[x];
 	while (temp)
 	{
